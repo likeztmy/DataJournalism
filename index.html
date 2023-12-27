@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Echarts5 -->
+    <script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.js'></script>
+    <script type="text/javascript" src="./script/echarts-wordcloud.js"></script>
+    <script type="text/javascript" src="./script/china.js"></script>
+    <!-- 全国344个市、区、州对应的数字编号 -->
+    <title>预制菜</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <Header class="app-header">
+        <div class="app-header-bg-box"></div>
+        <p class="app-header-title">餐桌上的革新</p>
+        <p class="app-header-description">预制菜的浪潮冲翻了什么</p>
+        <div class="app-header-down-arrow">
+          <svg t="1702558092896" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3446" width="128" height="128">
+            <path
+              d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z"
+              fill="#2c2c2c" p-id="3447"></path>
+            <path
+              d="M672 499.2l-128 119.466667V341.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v277.333334l-128-119.466667c-12.8-12.8-34.133333-10.666667-44.8 2.133333-12.8 12.8-10.666667 34.133333 2.133333 44.8l181.333334 170.666667c6.4 6.4 14.933333 8.533333 21.333333 8.533333s14.933333-2.133333 21.333333-8.533333l181.333334-170.666667c12.8-12.8 12.8-32 2.133333-44.8-12.8-12.8-32-14.933333-44.8-2.133333z"
+              fill="#2c2c2c" p-id="3448"></path>
+          </svg>
+        </div>
+      </Header>
+      <section class="app-hot">
+        <div class="app-hot-content-box">
+          <p class="app-hot-content1"> 预制菜争议由来已久</p>
+          <p class="app-hot-content1">"预制菜进校园"成为问题爆发的导火索
+          </p>
+          <div class="app-hot-content-box1">
+            <p class="app-hot-content2">预制菜在中国市场的发展历程中，虽然起步较晚，自上世纪90年代起步后，就持续面临着争议。<a target="_blank"
+                href="https://zhuanlan.zhihu.com/p/638450661">[1]</a>
+            </p>
+            <p class="app-hot-content2">尽管它以方便快捷和高性价比等优势受到餐饮业和部分消费者的欢迎，有助于提高餐饮业的经营效率和家庭烹饪的时间效率，但其弊端也不可忽视。
+              公众对预制菜的主要担忧集中在食品健康安全问题上。快速制作的预制菜品质和营养价值经常受到质疑。例如，油脂含量过高、钠含量超标等问题，以及由于技术限制导致的绿色蔬菜等健康食品缺乏，这些都可能引起营养失衡。特别是在青少年和白领等主要消费群体中，这种营养不平衡可能对健康产生负面影响。
+            </p>
+            <p class="app-hot-content2">
+              近期关于预制菜进入校园的争议，进一步加剧了公众对预制菜的担忧，成为推动预制菜成为热点话题的关键因素。这反映了长期以来公众对预制菜的疑虑和担心情绪的集中爆发。
+            </p>
+          </div>
+
+        </div>
+
+        <div class="app-hot-circle1"></div>
+        <div class="app-hot-circle2"></div>
+        <div class="app-hot-img1-box app-hot-img-box">
+          <img src="http://blog.likeztmy.xyz/hotimg1.png" alt="">
+        </div>
+        <div class="app-hot-img2-box app-hot-img-box">
+          <img src="http://blog.likeztmy.xyz/hotimg2.png" alt="">
+        </div>
+        <div class="app-hot-img3-box app-hot-img-box">
+          <img src="http://blog.likeztmy.xyz/hotimg3.png" alt="">
+        </div>
+        <div class="app-hot-img4-box app-hot-img-box">
+          <img src="http://blog.likeztmy.xyz/hotimg4.png" alt="">
+        </div>
+        <script type="text/javascript" src="./script/appHotScript.js"></script>
+      </section>
+      <section class="app-show-image">
+      </section>
+      <section class="app-school">
+        <div class="app-school-circle1"></div>
+        <div class="app-school-content-box">
+          <div class="app-school-content-box1">
+            <p class="app-school-title"><span class="app-school-title-strong">大学生</span>对于预制菜了解多少？
+            </p>
+            <p class="app-school-description">基于武汉高校学生群体的问卷调查</p>
+            <div class="app-school-content-box2">
+              <p class="app-school-content">
+                “预制菜进校园”是预制菜问题的热点话题之一，不仅是学校食堂经营管理者需要承担相应责任，作为学校食堂消费的主要群体，学生对于预制菜也需要引起高度的重视和关注。
+              </p>
+              <p class="app-school-content">我们选取了武汉市内的五所高等院校发放在线问卷调查，一共收到480份问卷答复。重点围绕认识渠道、问题关注以及隐患担忧等几个方面进行调查，其调查结果如下
+              </p>
+            </div>
+          </div>
+          <div class="app-school-img-box"><img src="http://blog.likeztmy.xyz/schoolimg.png" alt=""></div>
+        </div>
+      </section>
+      <section class="app-research">
+        <div class="app-research-content-box">
+          <div class="app-research-people">
+            <div class="app-research-people-graph-box">
+              <div id="app-research-people-graph"></div>
+              <div class="app-research-people-img">
+                <img src="http://blog.likeztmy.xyz/male.png" alt="">
+                <img src="http://blog.likeztmy.xyz/female.png" alt="">
+
+              </div>
+            </div>
+            <div class="app-research-people-description-box">
+              <p class="app-research-people-description-title">问卷调查共计采访：</p>
+              <p class="app-research-people-description-content">男性230人<br>
+                女性250人</p>
+            </div>
+          </div>
+          <div class="app-research-road">
+            <div class="app-research-road-description-box">
+              <p class="app-research-road-description-title">
+                <span class="app-research-title-strong">“</span>视频平台成为大学生了解预制菜的主要途径
+              </p>
+              <p class="app-research-road-description-content1">
+                在自媒体时代，视频平台已成为多数大学生的主要信息来源。这对预制菜制造商和营销者来说，提供了一个利用吸引力强的视觉内容和创新营销策略来推广产品的机会。</p>
+              <p class="app-research-road-description-content2">
+                然而，短视频内容的真实性和准确性可能不及传统媒体或专业渠道，可能导致大学生接收关于预制菜的误导或片面信息，影响他们的饮食选择和健康。</p>
+            </div>
+            <div id="app-research-road-graph-box"></div>
+          </div>
+        </div>
+        <div id="app-research-graph-box1"></div>
+      </section>
+      <script type="text/javascript" src="./script/appResearchScript.js"></script>
+      <section class="app-type">
+        <div class="app-type-content-box">
+          <div class="app-type-content-box1">
+            <p class="app-type-title"><span class="app-type-title-strong">“</span>你们认为哪些是预制菜？</p>
+            <div id="app-type-graph"></div>
+            <p class="app-type-content">在简单的预制菜判断调查中，能够正确判断预制菜分类的同学比例并不算高，由此可以推测学生群体对于预制菜的认知和界定并不清晰。</p>
+          </div>
+          <div class="app-type-content-box2">
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg1.jpeg" alt="">
+            </div>
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg4.jpeg" alt="">
+            </div>
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg6.png" alt="">
+            </div>
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg2.jpeg" alt="">
+            </div>
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg5.jpeg" alt="">
+            </div>
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg7.jpeg" alt="">
+            </div>
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg3.jpeg" alt="">
+            </div>
+            <div class="type-img-box">
+              <img class="type-img" src="http://blog.likeztmy.xyz/typeimg8.jpeg" alt="">
+            </div>
+            <div class="bg-box1"><img src="http://blog.likeztmy.xyz/typeimgbg.png" alt=""></div>
+            <div class="bg-box2"><img src="http://blog.likeztmy.xyz/typeimgbg.png" alt=""></div>
+          </div>
+        </div>
+      </section>
+      <script type="text/javascript" src="./script/appTypeScript.js"></script>
+      <section class="app-safe">
+        <div class="app-safe-content-box">
+          <div class="app-safe-title-box">
+            <div class="app-safe-title-arrow">
+              <img src="http://blog.likeztmy.xyz/safearrow.png" alt="">
+            </div>
+            <p class="app-safe-title">预制菜的安全隐患</p>
+          </div>
+          <div class="app-safe-content-box1">
+            <div class="app-safe-content-box2">
+              <p class="app-safe-content-box2-question1">
+                您认为学校是否使用预制菜？
+              </p>
+              <div id="app-safe-question1-graph"></div>
+              <p class="app-safe-content-box2-question2">
+                您是否会在知道是预制菜的情况下，仍然选择购买？
+              </p>
+              <div id="app-safe-question2-graph"></div>
+              <p class="app-safe-result1">
+                59.38%的参与者认为他们的学校使用预制菜。这表明学校为了简化食品准备流程、降低成本或应对食堂工作人员短缺的情况，已经开始一定规模采用预制菜。
+              </p>
+              <p class="app-safe-result2">72.92%的参与者表示即使知道食物是预制的，他们仍会选择购买。表明学生对预制食品的接受度较高。
+              </p>
+              <p class="app-safe-result3">
+                尽管接受度高，但预制菜的质量、营养价值和安全性是关键考虑因素。家长、学生和教育机构可能对预制食品的健康影响持谨慎态度。学校和供应商需要确保预制菜品符合营养和卫生标准。
+              </p>
+            </div>
+            <div class="app-safe-content-box3">
+              <p class="app-safe-content-box3-question3">
+                您认为预制菜存在哪些安全隐患?
+              </p>
+              <div id="app-safe-question3-graph"></div>
+              <p class="app-safe-result4">
+                超过半数的受访者担心预制菜缺乏营养，近半数认为这可能增加慢性疾病风险。同时，超过59%的受访者表示担忧预制菜的生产过程可能导致食物中毒。
+              </p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appSafeScript.js"></script>
+      </section>
+      <section class="app-what">
+        <div class="app-what-content-box">
+          <div class="app-what-title-box">
+            <p class="app-what-title">热议的预制菜到底是什么?
+            </p>
+          </div>
+          <div class="app-what-description-box">
+            <p class="app-what-description">
+              近来，公众对于预制菜的讨论主要集中在料理包上。然而，预制菜行业已拥有数十年的发展历史，涵盖了丰富多样的种类。众所周知的料理包，实际上只是今年流行的众多预制菜品种中的一种。预制菜的种类远不止于此，它的发展历程和产品多样性值得更深入的探讨和了解。
+            </p>
+          </div>
+          <div class="app-what-items-box">
+            <div class="app-what-item app-what-item1">
+              <div class="app-what-item-img">
+                <img src="http://blog.likeztmy.xyz/whatimg1.png" alt="">
+              </div>
+              <div class="app-what-item-p">
+                <p><span class="app-what-item-p-strong">即配预制菜：</span>仅仅分割好、预包装的生食材，需要在厨房进行加工的。超市里面的各种净菜属于这一类</p>
+              </div>
+            </div>
+            <div class="app-what-item app-what-item2">
+              <div class="app-what-item-p">
+                <p><span
+                    class="app-what-item-p-strong">即烹预制菜：</span>已经进行了一些处理，但还需要继续进行烹饪操作才可以吃的。比如速冻水饺，方便面、自热火锅、自热米饭（对，这些方便食品也都是预制菜！）以及一些超市会卖的半成品菜肴，需要买回来进行一定加工的那种。
+                </p>
+              </div>
+              <div class="app-what-item-img  app-what-item-img2">
+                <img src="http://blog.likeztmy.xyz/whatimg2.png" alt="">
+              </div>
+            </div>
+            <div class="app-what-item app-what-item3">
+              <div class="app-what-item-img app-what-item-img3 ">
+                <img src="http://blog.likeztmy.xyz/whatimg3.png" alt="">
+              </div>
+              <div class="app-what-item-p">
+                <p><span class="app-what-item-p-strong">即热预制菜：</span>加热一下就可以直接吃的。这不仅包含各种预包装的冷冻菜肴，还包括大家超市经常买的速冻包子，速冻馒头……
+                </p>
+              </div>
+            </div>
+            <div class="app-what-item app-what-item4">
+              <div class="app-what-item-p">
+                <p><span
+                    class="app-what-item-p-strong">即食预制菜：</span>打开就可以直接吃的。比如熟食店买的各种酱肉、卤肉；超市买的火腿肠、肉罐头、鱼罐头、八宝粥罐头，各种熟食料理包等
+                </p>
+              </div>
+              <div class="app-what-item-img app-what-item-img4">
+                <img src="http://blog.likeztmy.xyz/whatimg4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appWhatScript.js"></script>
+      </section>
+      <section class="app-accept">
+        <div class="app-accept-content-box">
+          <div class="app-accpet-title-box">
+            <p class="app-accept-title">大学生对不同预制菜的接受程度</p>
+          </div>
+          <div id="app-accept-graph"></div>
+          <div class="app-accept-result-box">
+            <p class="app-accept-result">
+              大学生对不同预制菜的接受程度差异主要受食品安全担忧和公众接受程度的影响。即食类和即热类预制菜，如开袋即食零食和方便面，由于加工简单和市场普及，被视为较安全，因此获得较高接受度。相反，即烹类和即配类预制菜因其复杂的加工和保存过程，引起更多关于添加剂和营养成分的担忧，接受度相对较低。
+            </p>
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appAcceptScript.js"></script>
+      </section>
+      <section class="app-main-product">
+        <div class="app-main-product-content-box">
+          <div class="app-main-product-title-box">
+            <p class="app-main-product-title">电商平台的主流预制菜</p>
+          </div>
+          <div class="app-main-product-description-box">
+            <p class="app-main-product-description">我们通过分析淘宝及京东有关预制菜的商品词条，通过统计得出了最受观众欢迎的预制菜类型，其中盖浇饭高居榜首。</p>
+          </div>
+          <div class="app-main-product-content-box1">
+            <div class="app-main-product-cloud-box">
+              <div id="app-main-product-cloud1"></div>
+              <div id="app-main-product-cloud2"></div>
+            </div>
+            <div class="app-main-product-result-box">
+              <p class="app-main-product-result">大多数消费者赞赏预制菜的新鲜度和口感，同时强调其性价比。
+                然而，对于口味和分量的担忧也凸显出来，指出了产品改进的潜在方向。
+                此外，尽管物流和服务质量受到好评，但包装和长期健康影响等方面的担忧仍然存在。
+                这些反馈指明了预制菜在追求便利的同时，需更加注重产品的整体质量和消费者体验。</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="./data/Product.js"></script>
+        <script type="text/javascript" src="./data/Comment.js"></script>
+        <script type="text/javascript" src="./script/appMainProductScript.js"></script>
+      </section>
+      <section class="app-process">
+        <div class="app-process-content-box">
+          <div class="app-process-title-box">
+            <p class="app-process-title">预制菜制作流程及规范</p>
+          </div>
+          <div class="app-process-description-box">
+            <p class="app-process-description">公众对于预制菜的误解源于不熟悉，解答公众对于预制菜的制作工艺及流程的困惑是解决预制菜问题焦虑的重要途径。</p>
+          </div>
+          <div class="app-process-img-box">
+            <img src="http://blog.likeztmy.xyz/processimg.png" alt="">
+          </div>
+          <div class="app-process-result-box">
+            <p class="app-process-result1">从选材、加工到最终包装，我们详细了解了预制菜的整个生产流程，并重点研究了相关的食品安全和卫生规定。</p>
+            <p class="app-process-result2">
+              通过深入探讨预制菜的制作细节和行业标准，我们发现虽然目前已经有了一定的规范政策，但是行业标准并不统一，其监管机制绝大部分仍然依赖于地方监督和自我监督。由此可见，预制菜乱象的存在并非偶然现象，这与政府管理规定的缺席有着密不可分的关系。
+            </p>
+          </div>
+          <iframe src="./rule.pdf" width="1000" height="800"></iframe>
+        </div>
+
+      </section>
+
+      <section class="app-industry">
+        <div class="app-industry-bg-box"></div>
+        <div class="app-industry-content-box">
+          <div class="app-industry-title-box">
+            <p class="app-industry-title">聚焦预制菜市场，行业发展现状如何</p>
+          </div>
+          <div id="app-industry-graph"></div>
+          <div class="app-industry-result-box">
+            <p class="app-industry-result">
+              以上为预制菜公司成立时间折线图，数据显示自1950年以来，这一行业经历了缓慢而稳定的增长，直至2000年左右开始加速。特别是从2021年开始，成立公司的数量呈指数级增长，到2023年达到一个显著高峰。
+            </p>
+            <p class="app-industry-result">
+              预制菜公司数量的剧增表明该行业正处于快速发展阶段，受到多方面因素的推动。未来，该行业可能会继续保持增长势头，但也可能面临如食品安全规范、健康趋势等新的挑战。
+            </p>
+          </div>
+        </div>
+        <script type="text/javascript" src="./data/CompanyYear.js"></script>
+        <script type="text/javascript" src="./script/appIndustry.js"></script>
+      </section>
+      <section class="app-company">
+        <div class="app-company-bg-box"></div>
+        <div class="app-company-content-box">
+          <div class="app-company-content-box">
+            <div class="app-company-map-box">
+              <div class="app-company-change-map">
+                <div class="change-map-btn" id="company-btn">公司</div>
+                <div class="change-map-btn" id="product-btn">商品</div>
+              </div>
+              <div id="app-company-map"></div>
+            </div>
+            <div class="app-company-result-box">
+              <p class="app-company-result">中国预制菜相关公司和淘宝网店分布呈现地域特色。山东省以695家公司领先，而湖南省的淘宝网店数量达883家居首。</p>
+              <p class="app-company-result">这一现象受经济发展水平、人口密集度、文化习惯、交通物流和电子商务发展等因素影响。</p>
+              <p class="app-company-result">
+                经济较发达的地区（如上海市、广东省、浙江省）在预制菜行业中的公司数量较多。这可能是因为经济发达地区消费水平高，市场需求大，因此吸引了更多相关企业的投资和发展。然而，淘宝网店的分布并不完全遵循这一模式，表明小型电商业务在经济不那么发达的地区也有一定的发展空间
+              </p>
+              <p class="app-company-result1">
+                数据来源：<br>[1]天眼查：<a
+                  href="https://www.tianyancha.com/login?from=https%3A%2F%2Fwww.tianyancha.com%2F">https://www.tianyancha.com/login?from=https%3A%2F%2Fwww.tianyancha.com%2F</a>
+              </p>
+              <p class="app-company-result1">[2]淘宝网：<a href="https://world.taobao.com/">https://world.taobao.com/</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="./data/CompanyProvince.js"></script>
+        <script type="text/javascript" src="./data/ProductProvince.js"></script>
+        <script type="text/javascript" src="./script/appCompany.js"></script>
+      </section>
+      <section class="app-feature">
+        <div class="app-feature-bg-box"></div>
+        <div class="app-feature-content-box">
+          <div id="app-feature-graph"></div>
+          <div class="app-feature-result">
+            根据采访调查，有近一半的受访者对预制菜行业的未来持乐观态度，这不仅说明公众对于预制菜有一定认可度，更说明了预制菜市场的潜力巨大。但其未来发展仍存在不确定性，特别是在消费者对其营养和安全性的担忧方面。预制菜行业的发展需要平衡效率和便利性与提高食品质量和安全性之间的关系，以更好地满足消费者的需求和期望。
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appFeatureScript.js"></script>
+      </section>
+      <section class="app-about">
+        <div class="app-about-content-box">
+          <div class="app-about-title-box">
+            <p class="app-about-title">人们讨论<span class="app-about-title-strong">预制菜</span>时，在讨论什么？</p>
+          </div>
+          <div class="app-about-content-box1">
+            <div class="app-about-bg-box">
+              <img src="http://blog.likeztmy.xyz/weibo.png" alt="">
+            </div>
+            <div class="app-about-img-box">
+              <img src="http://blog.likeztmy.xyz/aboutimg.png" alt="">
+            </div>
+            <div class="app-about-result-box">
+              <p class="app-about-result">
+                为了了解公众对于预制菜的关注话题，我们针对微博“预制菜”词条内容进行了统计分析，其中<span
+                  class="app-about-result-strong">“和外卖有关，消费者，进校园”</span>话题尤其受到广泛关注，公众对预制菜进入校园环境的关注度极高。
+              </p>
+              <p class="app-about-result">紧随其后的讨论集中在<span class="app-about-result-strong">“好吃，健康”</span>和<span
+                  class="app-about-result-strong">“发展快，有争议”</span>两个方面，这反映了消费者对预制菜口味和健康影响的关心，以及对其快速发展背后可能存在的行业争议。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="app-consumer-research">
+        <div class="app-consumer-research-content-box">
+          <div class="app-consumer-research-description-box">
+            <p class="app-consumer-research-description">
+              <span
+                class="app-consumer-research-description-strong">消费者</span>在购买预制菜时存在一些困扰以及目前预制菜市场存在的问题，具体包括菜品质量参差不齐、菜品口味有待提升、菜品标识不详细、菜品种类单一、物流配送及提货问题多等方面
+            </p>
+          </div>
+          <div class="app-consumer-research-graph-box">
+            <div class="app-consumer-research-graphbg1" id="app-consumer-research-graph1"></div>
+            <div class="app-consumer-research-graphbg2" id="app-consumer-research-graph2"></div>
+            <div class="app-consumer-research-graphbg3" id="app-consumer-research-graph3"></div>
+            <div class="app-consumer-research-graphbg4" id="app-consumer-research-graph4"></div>
+            <div class="app-consumer-research-graphbg5" id="app-consumer-research-graph5"></div>
+          </div>
+          <div class="app-consumer-research-result-box">
+            <p class="app-consumer-research-result">
+              消费者主要关注食品安全、口味质量、产品信息的透明度以及购买的便利性，这些因素直接影响他们的购买决策和满意度。
+            </p>
+            <p class="app-consumer-research-result">
+              与此同时，企业则需关注质量控制、产品创新、有效的市场沟通和供应链优化，以满足市场需求并保持竞争力。这些挑战和需求在预制菜行业的发展中起着决定性的作用。
+            </p>
+            <p class="app-consumer-research-result">
+              预制菜行业的健康发展依赖于消费者需求的满足和企业对这些需求的有效响应。消费者的关注点提供了企业改进和创新的方向，而企业的努力又能够提升消费者体验和市场份额。在这个快速发展的行业中，理解并满足这些双向需求是实现长期成功的关键。​​
+            </p>
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appConsumerResearchScript.js"></script>
+      </section>
+      <section class="app-safe1">
+        <div class="app-safe1-content-box">
+          <div class="app-safe1-title-box">
+            <p class="app-safe1-title">预制菜的<span class="app-safe1-title-strong">安全性</span>是谁在把握？</p>
+          </div>
+          <div class="app-safe1-description-box">
+            <p class="app-safe1-description">
+              根据某自媒体账号2022年做了一期研究调查，选取了市面上典型的几种预制菜厂商进行了抽样检测，在常规安全指标方面，十二组样本均在国家标准限额以内，但是其中谷言出产的宫保鸡丁检测出塑化剂残留问题，且超过了国标规定的最大残留量0.3mg/kg
+              （毫克每千克）。</p>
+          </div>
+          <div class="app-safe1-table-box">
+            <div class="app-safe1-table-bg1">
+              <img src="http://blog.likeztmy.xyz/tablebg1.png" alt="">
+            </div>
+            <div class="app-safe1-table-bg2">
+              <img src="http://blog.likeztmy.xyz/tablebg2.png" alt="">
+            </div>
+            <div class="app-safe1-table-bg3">
+              <img src="http://blog.likeztmy.xyz/tablebg3.png" alt="">
+            </div>
+            <div class="app-safe1-table-bg4">
+              <img src="http://blog.likeztmy.xyz/tablebg4.png" alt="">
+            </div>
+            <div class="app-safe1-table-bg5">
+              <img src="http://blog.likeztmy.xyz/tablebg5.png" alt="">
+            </div>
+            <table>
+              <tr>
+                <th class="table-title1" rowspan="2" colspan="2">标准限量</th>
+                <th class="table-title2" colspan="1">菌落cfu/g</th>
+                <th class="table-title2" colspan="1">过氧化值g/100g</th>
+                <th class="table-title2" rowspan="1">铅mg/kg</th>
+                <th class="table-title2" rowspan="1">镉mg/kg</th>
+                <th class="table-title2" rowspan="1">亚硝酸盐mg/kg</th>
+                <th class="table-title2" rowspan="1">邻苯二甲酸二正丁酯mg/kg</th>
+              </tr>
+              <tr>
+                <th>100000</th>
+                <th>0.25</th>
+                <th>0.2</th>
+                <th>0.1</th>
+                <th>30</th>
+                <th>0.3</th>
+              </tr>
+              <tr>
+                <td class="table-title2" rowspan="2">双汇筷乐星厨</td>
+                <td>宫保鸡丁</td>
+                <td>&lt;10</td>
+                <td>0.024</td>
+                <td>0.095</td>
+                <td>0.015</td>
+                <td>未检测出</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td>台式卤肉</td>
+                <td>&lt;10</td>
+                <td>0.041</td>
+                <td>0.096</td>
+                <td>0.012</td>
+                <td>未检测出</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td class="table-title2" rowspan="2">谷言</td>
+                <td>宫保鸡丁</td>
+                <td>&lt;10</td>
+                <td>0.022</td>
+                <td>0.084</td>
+                <td>0.047</td>
+                <td>3.7</td>
+                <td>0.58</td>
+              </tr>
+              <tr>
+                <td>台式卤肉</td>
+                <td>&lt;10</td>
+                <td>0.036</td>
+                <td>0.13</td>
+                <td>0.012</td>
+                <td>5.1</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td class="table-title2" rowspan="2">雨润</td>
+                <td>宫保鸡丁</td>
+                <td>350</td>
+                <td>0.027</td>
+                <td>0.11</td>
+                <td>0.016</td>
+                <td>2.1</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td>台式卤肉</td>
+                <td>1100</td>
+                <td>0.03</td>
+                <td>0.088</td>
+                <td>0.009</td>
+                <td>2</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td rowspan="2">厨哈哈</td>
+                <td>宫保鸡丁</td>
+                <td>770</td>
+                <td>0.035</td>
+                <td>0.12</td>
+                <td>0.037</td>
+                <td>未检测出</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td>台式卤肉</td>
+                <td>&lt;10</td>
+                <td>0.025</td>
+                <td>0.088</td>
+                <td>0.0076</td>
+                <td>1.4</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td class="table-title2" rowspan="2">粮农星厨</td>
+                <td>宫保鸡丁</td>
+                <td>&lt;10</td>
+                <td>0.045</td>
+                <td>0.082</td>
+                <td>0.013</td>
+                <td>1.3</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td>台式卤肉</td>
+                <td>65</td>
+                <td>0.03</td>
+                <td>0.089</td>
+                <td>0.0042</td>
+                <td>1.5</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td class="table-title2" rowspan="2">蒸煮烩</td>
+                <td>宫保鸡丁</td>
+                <td>&lt;10</td>
+                <td>0.027</td>
+                <td>0.077</td>
+                <td>0.0076</td>
+                <td>未检测出</td>
+                <td>未检测出</td>
+              </tr>
+              <tr>
+                <td>台式卤肉</td>
+                <td>13000</td>
+                <td>0.037</td>
+                <td>0.084</td>
+                <td>0.007</td>
+                <td>1.4</td>
+                <td>未检测出</td>
+              </tr>
+              <!-- Repeat rows as necessary, using the 'highlight' class for cells that are highlighted in the image -->
+            </table>
+          </div>
+          <div class="app-safe1-img-box">
+            <img src="http://blog.likeztmy.xyz/safe1img.png" alt="">
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appSafe1Script.js"></script>
+      </section>
+      <section class="app-safe1-result">
+        <div class="app-safe1-result-content-box">
+          <div class="app-safe1-result-img-box">
+            <img src="http://blog.likeztmy.xyz/safe1resultimg.png" alt="">
+          </div>
+          <div class="app-safe1-result-content-box1">
+            <div class="app-safe1-result-description-box">
+              <p class="app-safe1-result-description">时隔两个月后，再次购买检测谷言的宫保鸡丁，塑化剂残余问题较之上次<strong>更加严重</strong>。</p>
+            </div>
+            <div class="app-safe1-result-content-box2">
+              <p class="app-safe1-result-content">谷言宫保鸡丁中的塑化剂残留问题说明公众对预制菜食品安全的担忧<strong>并非空穴来风</strong>。
+              </p>
+              <p class="app-safe1-result-content">该品牌需要及时采取措施解决问题，确保所有产品符合食品安全标准，这不仅关乎自身的产品质量，更是对消费者生命健康的负责。
+              </p>
+              <p class="app-safe1-result-content">对<strong>消费者</strong>而言，这一事件也提醒他们在购买预制菜时要更加留意产品的质量和安全性。
+              </p>
+              <p class="app-safe1-result-content">
+                对预制菜行业持续监管的重要性由此可见一斑，相关部门和生产企业必须加强对食品安全标准的遵守，才能使消费者<strong>“买的放心、吃得安心”</strong>。
+              </p>
+              <p class="app-safe1-result-content1">数据来源：[1]《检测花费2万元，预制菜能不能放心吃？丨凰家实验室》
+                <a
+                  href="https://www.youtube.com/watch?app=desktop&v=GMk7RE88Jak">https://www.youtube.com/watch?app=desktop&v=GMk7RE88Jak</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="app-nutrition">
+        <div class="app-nutrition-content-box">
+          <div class="app-nutrition-part1-box">
+            <div class="app-nutrition-part1-img-box">
+              <p class="app-nutrition-part1-title">要安全，更要有营养！</p>
+              <img src="http://blog.likeztmy.xyz/nutritionimg1.png" alt="">
+            </div>
+            <div class="app-nutrition-part1-description-box">
+              <div class="app-nutrition-part1-description-bg1">
+                <img src="http://blog.likeztmy.xyz/nutritionimg2.png" alt="">
+              </div>
+              <div class="app-nutrition-part1-description-bg2">
+                <img src="http://blog.likeztmy.xyz/nutritionimg2.png" alt="">
+              </div>
+              <p class="app-nutrition-part1-description">
+                与新鲜蔬菜相比，碳水化合物、蛋白质、脂肪和矿物质的变化不大，但维生素有一定程度的损失。但是现炒的菜与新鲜蔬菜相比，维生素也有损失。因为蔬菜的清洗、烹饪过程会对维生素造成影响。</p>
+            </div>
+          </div>
+          <div class="app-nutrition-part2-box">
+            <div class="app-nutrition-part2-title-box">
+              <p class="app-nutrition-part2-title">营养成分<span class="app-nutrition-part2-title-strong">虚报严重</span>
+              </p>
+            </div>
+            <div class="app-nutrition-part2-description-box">
+              <p class="app-nutrition-part2-description">上文自媒体的对于十二种市面预制菜的检验结果显示：十二种商品存在营养成分虚标的通病。
+              </p>
+            </div>
+            <div class="app-nutrition-part2-img-box">
+              <img src="http://blog.likeztmy.xyz/nutritionimg3.png" alt="">
+            </div>
+          </div>
+          <div class="app-nutrition-part3-box">
+            <div class="app-nutrition-part3-title-box">
+              <p class="app-nutrition-part3-title">营养价值<span class="app-nutrition-part3-title-strong">一般,</span>但还算<span
+                  class="app-nutrition-part3-title-strong">合格</span>
+              </p>
+            </div>
+            <div class="app-nutrition-part3-description-box">
+              <p class="app-nutrition-part3-description">总体营养成分中规中矩，不能算是垃圾食品。虽相较于现炒菜，肯定略有不足，但是单次适量使用，不存在钠或脂肪摄入过量的情况。
+              </p>
+            </div>
+            <div class="app-nutrition-part3-img-box">
+              <img src="http://blog.likeztmy.xyz/nutritionimg4.png" alt="">
+            </div>
+            <div class="app-nutrition-part3-img-box">
+              <img src="http://blog.likeztmy.xyz/nutritionimg5.png" alt="">
+            </div>
+          </div>
+          <div class="app-nutrition-part4-box">
+            <div class="app-nutrition-part4-content-box">
+              <div class="app-nutrition-part4-title-box">
+                <p class="app-nutrition-part4-title">口味只能算<span class="app-nutrition-part4-title-strong">凑合</span></p>
+              </div>
+              <div class="app-nutrition-part4-result-box">
+                <p class="app-nutrition-part4-result">
+                  凰家实验室对其中检测合格的11款产品进行了试吃评分，高分组即使在同类产品中排名靠前，但是依然被认为味道缺少“锅气”、味道凑合，而低分组则得到了“酸味重”、“肉很柴”、“肉坏了”等各种极差评价。
+                  由此可见，即使是同类出色产品也仅仅在大众认可的及格线左右，而同类表现较差的产品则根本无法被大众接受，预制菜在口味方面仍有较大的提升空间。</p>
+              </div>
+            </div>
+            <div class="app-nutrition-part4-img-box">
+              <img src="http://blog.likeztmy.xyz/nutritionimg6.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="app-distinction">
+        <div class="app-distinction-content-box">
+          <div class="app-distinction-circle1"></div>
+          <div class="app-distinction-circle2"></div>
+          <div class="app-distinction-title-box">
+            <div class="app-distinction-title-img">
+              <img src="http://blog.likeztmy.xyz/distinctionimg.png" alt="">
+            </div>
+            <p class="app-distinction-title">擦亮眼睛，辨别预制菜</p>
+          </div>
+          <div class="app-distinction-description-box">
+            <p class="app-distinction-description1">
+              市面上存在着很多以预制菜充当现炒菜的情况，这也是一直引发消费者不满的问题。作为消费者，在面对预制菜时作出正确的判断，维护自身的合法权益，是推动预制菜行业规范化发展的重要途径。</p>
+            <p class="app-distinction-description">
+              在当前餐饮市场中，预制菜因其便利性而在多种菜品中广泛应用，尤其在一些常见的餐馆菜品中。例如，“小炒黄牛肉”、“拆骨肉”、“梅干菜扣肉”、“扇子骨”、“脆皮鸡（鸭）”、“牛肉粒”、“蒙古肉”、“蒜蓉粉丝扇贝”、“臭鳜鱼”、“臭鲈鱼”、“水煮鱼”、“羊肉串”、“锡纸花甲”和“奥尔良鸡翅”等，这些菜品大多遵循<span
+                class="app-distinction-description-strong">腌制、油炸和口味重</span>的特点。
+            </p>
+            <p class="app-distinction-description">
+              <spna class="app-distinction-description-strong1">在口感上</spna>
+              ，预制菜常常显得异常嫩滑。例如，正常的新鲜牛肉，即使经过腌制和捶打，也不可能达到入口即化的程度。而在水煮鱼这道菜中，如果鱼片包裹着厚浆，口感过分滑嫩，且没有鱼头鱼架，那很可能是使用了盒装预制鱼片。
+            </p>
+            <p class="app-distinction-description"><span
+                class="app-distinction-description-strong1">在色泽和水分上</span>，预制菜通常因长时间的腌制和封装而呈现出暗淡偏红的颜色，肉质干燥，缺乏新鲜的汁水感。
+            </p>
+            <p class="app-distinction-description">值得注意的是，预制菜的应用并不局限于<span
+                class="app-distinction-description-strong">低端烧烤、炒菜和小海鲜</span>等。在一些<span
+                class="app-distinction-description-strong">高端酒席</span>中，预制菜的使用也相当普遍。</p>
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appDistinctionScript.js"></script>
+      </section>
+      <section class="app-global">
+        <div class="app-global-content-box">
+          <div class="app-global-title-box">
+            <p class="app-global-title">纵观全球预制菜行业</p>
+          </div>
+          <div class="app-global-img-box">
+            <div class="app-global-img1">
+              <img src="http://blog.likeztmy.xyz/globalimg1.jpeg" alt="">
+            </div>
+            <div class="app-global-img2">
+              <img src="http://blog.likeztmy.xyz/globalimg2.jpeg" alt="">
+            </div>
+          </div>
+          <div class="app-global-description-box">
+            <p class="app-global-description">国际预制菜市场在美国和日本成熟，突显<span
+                class="app-global-description-strong">科技发展和餐饮降本的趋势</span>。
+            </p>
+            <p class="app-global-description">美国预制菜依赖<span
+                class="app-global-description-strong">工业化和人口增长</span>，而日本则重视<span
+                class="app-global-description-strong">冷链物流和经济变化</span>。中国预制菜产业起步较晚，面临<span
+                class="app-global-description-strong">产品多样化、供应链优化</span>等挑战。
+            </p>
+            <p class="app-global-description">从国际经验中，中国可学习提高菜肴标准化、品质提升，以及创新营销策略，以适应市场需求和消费者偏好，同时解决食品安全和品质问题。
+            </p>
+            <p class="app-global-description1">来源：<br>
+              <a href="https://36kr.com/p/2488381561641089">[1]《日本人为什么能接受预制菜？》</a>
+            </p>
+            <p class="app-global-description1">
+              <a href="https://36kr.com/p/2324077643210375">[2]《日本预制菜五十年兴衰史，中国C端崛起仍需时间》</a>
+            </p>
+            <p class="app-global-description1">
+              <a href="https://www.163.com/dy/article/IGHBF1990519844C.html">[3]《美国日本也用预制菜，中国人到底在怕什么？》</a>
+            </p>
+            <p class="app-global-description1">
+              <a href="https://www.sohu.com/a/734991021_120740129">[4]《美、日预制菜的发展给我们带来了哪些启示？》</a>
+            </p>
+
+          </div>
+        </div>
+      </section>
+      <section class="app-answer">
+        <div class="app-answer-content-box">
+          <div class="app-answer-circle1"></div>
+          <div class="app-answer-circle2"></div>
+          <div class="app-answer-title-box">
+            <p class="app-answer-title">预制菜的<span class="app-answer-title-strong">浪潮</span>冲翻了什么？</p>
+          </div>
+          <div class="app-answer-description-box">
+            <div class="app-answer-description">
+              <p class="app-answer-description-title">餐饮行业的变革</p>
+              <p class="app-answer-description-content">预制菜使餐饮业的标准化和工业化得到提升，减少了对专业厨师的依赖，降低了后厨人工成本，有助于餐厅节约人力和租金成本。这种标准化由机器完成，保障了中餐菜品的一致性和质量。</p>
+            </div>
+            <div class="app-answer-description">
+              <p class="app-answer-description-title">生活方式的转变</p>
+              <p class="app-answer-description-content">快速生活节奏促使消费者寻求更方便快捷的饮食解决方案，预制菜满足了现代消费者对方便、快捷就餐需求，因此会持续发展并融入大众的生活。</p>
+            </div>
+            <div class="app-answer-description">
+              <p class="app-answer-description-title">食品工业的创新</p>
+              <p class="app-answer-description-content">为了可以保留预制菜食物的原味和营养成分，同时减少盐分的使用，预制菜企业会采用真空低温慢煮、液氮速冻等方式进行食品加工，这类工业化方式都将推动现代食品科技发展。</p>
+            </div>
+            <div class="app-answer-description">
+              <p class="app-answer-description-title">新的经济增长点</p>
+              <p class="app-answer-description-content">预制菜行业的发展带动了农业现代化和餐饮服务效率提升，促进了市场多样性和供应链经济增长，为农民创造了更多收入机会，对农业转型和提高农民收入产生了积极效应。</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appAnswerScript.js"></script>
+      </section>
+      <section class="app-summary">
+        <div class="app-summary-content-box">
+          <div class="app-summary-circle1"></div>
+          <div class="app-summary-circle2"></div>
+          <div class="app-summary-title-box">
+            <p class="app-summary-title">中国预制菜的<span class="app-summary-title-strong">未来</span>将何去何从？</p>
+          </div>
+          <div class="app-summary-description-box">
+            <p class="app-summary-description">
+              当前预制菜行业虽未像部分媒体所宣传的那样严重，但其<span class="app-summary-description-strong2">质量参差不齐</span>，尤其是在<span
+                class="app-summary-description-strong2">料理包</span>领域，由于缺乏专门的国家标准，成分标示不实现象普遍存在。这种不透明状态成为消费者对预制菜持<span
+                class="app-summary-description-strong2">保留态度</span>的主要原因。
+            </p>
+            <p class="app-summary-description">
+              特别是针对当前热议的<span
+                class="app-summary-description-strong1">“预制菜进校园”</span>议题，预制菜作为一种新兴产品，其对人体健康的长期影响尚未充分研究，因此在孩童身上进行此类实验是不可接受的。更进一步，如果学校食堂全面采用预制菜，将剥夺家长的<span
+                class="app-summary-description-strong1">知情权和选择权</span>，孩子们的<span
+                class="app-summary-description-strong2">健康保障</span>将面临严峻挑战。
+            </p>
+            <p class="app-summary-description">从行业层面来看，预制菜行业规范的建立迫在眉睫。
+              当前，该行业面临两大主要问题：<span
+                class="app-summary-description-strong2">一是由于缺乏国家标准</span>，行业难以孕育具有国际知名度的品牌，大量投资可能沦为无用功；<span
+                class="app-summary-description-strong2">二是消费者端的顾虑</span>，没有统一的行业标准导致消费者对产品的食品安全、营养成分和配方等持有质疑。朱丹蓬指出，尽快出台预制菜行业的国家标准对于行业的健康有序发展至关重要。[1]
+            </p>
+            <p class="app-summary-description">虽然预制菜的普及可能是大势所趋，但其发展的关键在于赢得<span
+                class="app-summary-description-strong1">消费者的信任</span>。只有在确保食品安全和营养方面取得实质性进展后，预制菜才能真正迎来其发展的春天。
+            </p>
+            <p style="text-align: right;">来源：[1]黄翔. 预制菜规模迅猛发展 产业仍存两大痛点[N]. 证券时报,2023-12-07(A04).</p>
+          </div>
+        </div>
+        <script type="text/javascript" src="./script/appSummaryScript.js"></script>
+      </section>
+    </div>
+  </body>
+
+</html>
